@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peiyao's personal website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dynamic-background"></div>
+    <header>
+        <nav>
+            <a href="#" class="logo" id="logo-button">PT</a>
+
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" data-bg="images/hero-bg.jpg">
+            <div class="content-card">
+                <h1>Hi, I'm <span class="highlight">Peiyao Tao</span>.</h1>
+                <p class="hero-tagline">
+                    I build systems that leverage computer vision and machine learning to solve real-world problems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="cta-button">View My Work</a>
+                    <a href="resume/Resume_CV.pdf" class="cta-button secondary">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" data-bg="images/about-bg.png">
+            <div class="content-card">
+                <h2>About Me</h2>
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="images/selfie.jpg" alt="Peiyao Tao Selfie">
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I am a second-year MSCS student at Northeastern University with a strong foundation in 
+                            <span class="highlight-text">Data Structures</span>, <span class="highlight-text">Algorithms</span>, 
+                            and <span class="highlight-text">Software Development</span>. 
+                            I have hands-on experience in <span class="highlight-text">Python</span>, 
+                            <span class="highlight-text">C++</span>, and <span class="highlight-text">Java</span>, 
+                            and I am proficient in using libraries such as <span class="highlight-text">OpenCV</span> 
+                            and <span class="highlight-text">TensorFlow</span>.
+                            I enjoy solving complex problems and learning new technologies. My interests lie in 
+                            <span class="highlight-text">Machine Learning</span>, 
+                            <span class="highlight-text">Computer Vision</span>, and <span class="highlight-text">Game Development</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work-experience" data-bg="images/work-experience-bg.jpg">
+            <h2>My Work Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>AI Developer Intern</h3>
+                    <p>Fenghua Railway Informatization Co., Ltd. - 05/2024 ~ 08/2024</p>
+                    <ul>
+                        <li>Built and labeled a dataset of 200+ images and trained a YOLOv5 object detection model that achieved 95.8% test accuracy and ran in real-time on video streams.</li>
+                        <li>Partnered with cross-functional engineers and safety teams to ensure the model aligned with field deployment requirements.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" data-bg="images/projects-bg.jpg">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3>Augmented Reality Chessboard (C++)</h3>
+                    <p>Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
+                    <ul>
+                        <li>Developed an augmented reality chessboard application using OpenCV and OpenGL, displaying virtual chess pieces on a physical board.</li>
+                        <li>Implemented real-time piece recognition and tracking using computer vision techniques, achieving 85% accuracy in piece projection.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://youtu.be/81PIRYOtdOY" target="_blank">Live Demo</a>
+                        <a href="https://github.com/PeiyaoTao/AR-Chessboard" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3>Calligraphy Style Recognition (Python)</h3>
+                    <p>Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
+                    <img src="images/calligraphy_project_poster.png" alt="Calligraphy Style Recognition Project Poster" class="zoomable-image">
+                    <ul>
+                        <li>Developed a machine learning model based on EfficientNet50 for classifying Chinese calligraphy styles.</li>
+                        <li>Applied stratified sampling techniques and attention mechanisms to improve model performance and reduce overfitting.</li>
+                        <li>Collected and preprocessed a dataset of 8,000+ images, achieving 97.9% average accuracy in style classification.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/PeiyaoTao/Calligraphy-Style-Recognition" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Discord Study Group Bot (Java)</h3>
+                    <p>Lead developer of team of four | Advisor: Prof. Alexander Lash, Professor of Software Engineering - 09/2024 ~ 12/2024</p>
+                    <ul>
+                        <li>Led the design process of a discord bot from scratch to make it easier for students to organize study groups.</li>
+                        <li>Used MongoDB to store user data and study group information.</li>
+                        <li>Developed the feature that sends reminder notifications through discord direct messages to users before scheduled meeting times and allow users to customize their own reminder lead time.</li>
+                    </ul>
+                    <div class="project-links">
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <h3>Chatroom Application (Java)</h3>
+                    <p>Main developer | Advisor: Dr. Brian Cross, Professor of Programming Design Paradigm - 09/2023 ~ 12/2023</p>
+                    <ul>
+                        <li>Designed a chatroom application using Java and WebSocket for real-time communication.</li>
+                        <li>Used threadpool for handling up to 10 clients at a time.</li>
+                        <li>Implemented a simple random compliment grammar generator for clients to greet others.</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/PeiyaoTao/Chatroom-Server-and-Client-Application" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" data-bg="images/contact-bg.jpg">
+            <div class="content-card">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <a href="mailto:taopeiyao@outlook.com" class="cta-button">Send me an email</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/peiyao-tao-06381a24a" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/PeiyaoTao" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Peiyao Tao. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+        <div id="image-modal-backdrop">
+            <span class="close-button">&times;</span>
+            <img id="modal-image-content">
+        </div>
+</body>
+</html>
