@@ -413,3 +413,47 @@ nav ul li a:hover {
     color: var(--accent-color);
     font-weight: bold;
 }
+
+/* --- Responsive Styles for Mobile Devices --- */
+@media (max-width: 768px) {
+
+    /* --- Responsive Typography --- */
+    /* We'll decrease the font sizes for smaller screens */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.2rem; }
+    p { font-size: 1rem; }
+    .experience-card li, .project-card li { font-size: 1rem; }
+
+    /* --- Responsive Navigation --- */
+    /* This will stack the logo and the links vertically */
+    nav {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the left */
+        gap: 1rem; /* Adds space between the logo and the links */
+    }
+
+    /* This stacks the navigation links themselves */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem; /* Reduces the gap for a tighter vertical list */
+        width: 100%;
+    }
+    
+    /* --- Layout Adjustments --- */
+    /* Reduce padding on sections for more content space */
+    section {
+        padding: 4rem 1rem;
+    }
+
+    /* Reduce padding on content cards */
+    .content-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Make buttons stack on top of each other in the hero section */
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
