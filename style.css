@@ -425,20 +425,28 @@ nav ul li a:hover {
     p { font-size: 1rem; }
     .experience-card li, .project-card li { font-size: 1rem; }
 
-    /* --- Responsive Navigation --- */
-    /* This will stack the logo and the links vertically */
+    /* --- Responsive Navigation (Scrollable Row) --- */
     nav {
-        flex-direction: column;
-        align-items: flex-start; /* Aligns items to the left */
-        gap: 1rem; /* Adds space between the logo and the links */
+        /* Keep the logo and the link container on one line */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem; /* Adjust padding as needed */
     }
 
-    /* This stacks the navigation links themselves */
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem; /* Reduces the gap for a tighter vertical list */
-        width: 100%;
+        list-style: none;
+        display: flex;
+        gap: 0.5rem; /* Space between links */
+
+        /* --- Key properties for horizontal scroll --- */
+        overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+        white-space: nowrap; /* Prevents the links from wrapping to a new line */
+    }
+
+    /* Hides the scrollbar for a cleaner look on compatible browsers */
+    nav ul::-webkit-scrollbar {
+        display: none;
     }
     
     /* --- Layout Adjustments --- */
