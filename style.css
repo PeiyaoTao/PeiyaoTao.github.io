@@ -245,6 +245,21 @@ nav ul {
     }
 }
 
+/* --- Styling for the two-image container --- */
+.image-container {
+    display: flex; /* Aligns images side-by-side */
+    gap: 0.5rem; /* Adds a small space between images */
+    margin: 1rem 0; /* Adds space above and below the container */
+}
+
+.image-container img {
+    flex: 1; /* Each image takes up equal space */
+    min-width: 0; /* A key fix for flexbox overflow */
+    height: 400px; /* Sets a fixed height for the images */
+    object-fit: cover; /* Crops the image to fit without distortion */
+    border-radius: 5px;
+}
+
 .experience-card, .project-card {
     /* --- The "Frosted Glass" Effect --- */
     background-color: rgba(26, 26, 26, 0.6); /* Semi-transparent background */
