@@ -429,6 +429,37 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+/* --- Language Switcher --- */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1.5rem; /* Adds space between nav links and switcher */
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Style for the currently active language button */
+.lang-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
 /* --- Responsive Styles for Mobile Devices --- */
 @media (max-width: 768px) {
 

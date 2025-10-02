@@ -110,4 +110,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Image Modal, Dropdown Menu, etc. (Unchanged) ---
     // (The rest of your code for modals and menus goes here)
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    // The function that performs the translation
+    function switchLanguage(lang) {
+        // Handle text content changes
+        document.querySelectorAll('[data-translate-key]').forEach(element => {
+            const key = element.getAttribute('data-translate-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
+        });
+
+        // NEW: Handle attribute changes (like the href for the resume)
+        document.querySelectorAll('[data-translate-attr]').forEach(element => {
+            const [attr, key] = element.getAttribute('data-translate-attr').split(':');
+            if (translations[lang] && translations[lang][key]) {
+                element.setAttribute(attr, translations[lang][key]);
+            }
+        });
+
+        // Update the active button style
+        langButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            }
+        });
+    }
+
+    // Add click event listeners to the buttons
+    langButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const selectedLang = event.target.getAttribute('data-lang');
+            switchLanguage(selectedLang);
+        });
+    });
+
+    // Set the default language on page load
+    if (langButtons.length > 0) {
+        switchLanguage('en');
+    }
 });

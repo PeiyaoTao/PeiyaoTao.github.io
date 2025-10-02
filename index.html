@@ -13,48 +13,72 @@
             <a href="#" class="logo" id="logo-button">PT</a>
 
             <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work-experience">Work Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero " data-translate-key="navHome">Home</a></li>
+                <li><a href="#about" data-translate-key="navAbout">About</a></li>
+                <li><a href="#work-experience" data-translate-key="navExperience">Work Experience</a></li>
+                <li><a href="#projects" data-translate-key="navProjects">Projects</a></li>
+                <li><a href="#contact" data-translate-key="navContact">Contact</a></li>
             </ul>
+
+            <div class="language-switcher">
+                <button data-lang="en" class="lang-btn active">EN</button>
+                <button data-lang="zh" class="lang-btn">ZH</button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="hero" data-bg="images/hero-bg.jpg">
             <div class="content-card">
-                <h1>Hi, I'm <span class="highlight">Peiyao Tao</span>.</h1>
-                <p class="hero-tagline">
+                <h1 data-translate-key="heroGreeting">Hi, I'm <span class="highlight">Peiyao Tao</span>.</h1>
+                <p class="hero-tagline" data-translate-key="heroTagline">
                     I build systems that leverage computer vision and machine learning to solve real-world problems.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="cta-button">View My Work</a>
-                    <a href="resume/Resume_CV.pdf" class="cta-button secondary">Download Resume</a>
+                    <a href="#projects" class="cta-button" data-translate-key="heroButtonWork">View My Work</a>
+                    <a href="resume/Resume_EN.pdf" class="cta-button secondary" data-translate-key="heroButtonResume" data-translate-attr="href:resumeUrl">Download Resume</a>
                 </div>
             </div>
         </section>
 
         <section id="about" data-bg="images/about-bg.png">
             <div class="content-card">
-                <h2>About Me</h2>
+                <h2 data-translate-key="aboutTitle">About Me</h2>
                 <div class="about-container">
                     <div class="about-image">
                         <img src="images/selfie.jpg" alt="Peiyao Tao Selfie">
                     </div>
                     <div class="about-text">
                         <p>
-                            I am a second-year MSCS student at Northeastern University with a strong foundation in 
-                            <span class="highlight-text">Data Structures</span>, <span class="highlight-text">Algorithms</span>, 
-                            and <span class="highlight-text">Software Development</span>. 
-                            I have hands-on experience in <span class="highlight-text">Python</span>, 
-                            <span class="highlight-text">C++</span>, and <span class="highlight-text">Java</span>, 
-                            and I am proficient in using libraries such as <span class="highlight-text">OpenCV</span> 
-                            and <span class="highlight-text">TensorFlow</span>.
-                            I enjoy solving complex problems and learning new technologies. My interests lie in 
-                            <span class="highlight-text">Machine Learning</span>, 
-                            <span class="highlight-text">Computer Vision</span>, and <span class="highlight-text">Game Development</span>.
+                            <span data-translate-key="aboutParagraphPart1">I am a second-year MSCS student at Northeastern University with a strong foundation in </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordDS">Data Structures</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordAlgorithms">Algorithms</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span data-translate-key="aboutKeywordAnd">and </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordSWDev">Software Development</span>
+                            <span data-translate-key="aboutKeywordPeriod">. </span>
+                            <span data-translate-key="aboutParagraphPart2">I have hands-on experience in </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordPython">Python</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordCPP">C++</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span data-translate-key="aboutKeywordAnd">and </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordJava">Java</span>
+                            <span data-translate-key="aboutKeywordPeriod">, </span>
+                            <span data-translate-key="aboutParagraphPart3">and I am proficient in using libraries such as </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordOpenCV">OpenCV</span>
+                            <span data-translate-key="aboutKeywordAnd"> and </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordTensorFlow">TensorFlow</span>
+                            <span data-translate-key="aboutKeywordPeriod">. </span>
+                            <span data-translate-key="aboutParagraphPart4">I enjoy solving complex problems and learning new technologies. My interests lie in </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordML">Machine Learning</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordCV">Computer Vision</span>
+                            <span data-translate-key="aboutKeywordComma">, </span>
+                            <span data-translate-key="aboutKeywordAnd">and </span>
+                            <span class="highlight-text" data-translate-key="aboutKeywordGameDev">Game Development</span>
+                            <span data-translate-key="aboutKeywordPeriod">.</span>
                         </p>
                     </div>
                 </div>
@@ -62,14 +86,14 @@
         </section>
 
         <section id="work-experience" data-bg="images/work-experience-bg.jpg">
-            <h2>My Work Experience</h2>
+            <h2 data-translate-key="experienceTitle">My Work Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
-                    <h3>AI Developer Intern</h3>
-                    <p>Fenghua Railway Informatization Co., Ltd. - 05/2024 ~ 08/2024</p>
+                    <h3 data-translate-key="experienceJobTitle1">AI Developer Intern</h3>
+                    <p data-translate-key="experienceCompany1">Fenghua Railway Informatization Co., Ltd. - 05/2024 ~ 08/2024</p>
                     <ul>
-                        <li>Built and labeled a dataset of 200+ images and trained a YOLOv5 object detection model that achieved 95.8% test accuracy and ran in real-time on video streams.</li>
-                        <li>Partnered with cross-functional engineers and safety teams to ensure the model aligned with field deployment requirements.</li>
+                        <li data-translate-key="experienceDesc1_1">Built and labeled a dataset of 3000+ images and trained a YOLOv5 object detection model that achieved 95.8% test accuracy and ran in real-time on video streams.</li>
+                        <li data-translate-key="experienceDesc1_2">Partnered with cross-functional engineers and safety teams to ensure the model aligned with field deployment requirements.</li>
                     </ul>
                 </div>
             </div>
@@ -80,100 +104,100 @@
             <div class="project-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <h3>Comparative Analysis of Deblurring Models (Python) </h3>
-                    <p>Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2025 ~ 09/2025</p>
+                    <h3 data-translate-key="project1Title">Comparative Analysis of Deblurring Models (Python) </h3>
+                    <p data-translate-key="project1Desc">Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2025 ~ 09/2025</p>
                     <img src="images/image-deblurring.png" alt="Comparative Analysis of Deblurring Models" class="zoomable-image">
                     <ul>
-                        <li>Developed and compared a CNN-based U-Net against a Transformer-based Swin-Unet for high-fidelity image deblurring.</li>
-                        <li>Engineered a hybrid Swin-Unet with multi-scale skip connections and enhanced the U-Net decoder with Efficient Channel Attention (ECA) principles to achieving state-of-the-art, artifact-free results.</li>
-                        <li>Implemented an advanced training pipeline using perceptual loss (VGG), a learning rate scheduler, and early stopping to maximize performance.</li>
+                        <li data-translate-key="project1Feat1">Developed and compared a CNN-based U-Net against a Transformer-based Swin-Unet for high-fidelity image deblurring.</li>
+                        <li data-translate-key="project1Feat2">Engineered a hybrid Swin-Unet with multi-scale skip connections and enhanced the U-Net decoder with Efficient Channel Attention (ECA) principles to achieving state-of-the-art, artifact-free results.</li>
+                        <li data-translate-key="project1Feat3">Implemented an advanced training pipeline using perceptual loss (VGG), a learning rate scheduler, and early stopping to maximize performance.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://github.com/PeiyaoTao/Image-Deblurring" target="_blank">GitHub</a>
+                        <a href="https://github.com/PeiyaoTao/Image-Deblurring" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <h3>Calligraphy Style Recognition (Python)</h3>
-                    <p>Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
+                    <h3 data-translate-key="project2Title">Calligraphy Style Recognition (Python)</h3>
+                    <p data-translate-key="project2Desc">Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
                     <img src="images/calligraphy_project_poster.png" alt="Calligraphy Style Recognition Project Poster" class="zoomable-image">
                     <ul>
-                        <li>Developed a machine learning model based on EfficientNet50 for classifying Chinese calligraphy styles.</li>
-                        <li>Applied stratified sampling techniques and attention mechanisms to improve model performance and reduce overfitting.</li>
-                        <li>Collected and preprocessed a dataset of 8,000+ images, achieving 97.9% average accuracy in style classification.</li>
+                        <li data-translate-key="project2Feat1">Developed a machine learning model based on EfficientNet50 for classifying Chinese calligraphy styles.</li>
+                        <li data-translate-key="project2Feat2">Applied stratified sampling techniques and attention mechanisms to improve model performance and reduce overfitting.</li>
+                        <li data-translate-key="project2Feat3">Collected and preprocessed a dataset of 8,000+ images, achieving 97.9% average accuracy in style classification.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://github.com/PeiyaoTao/Calligraphy-Style-Recognition" target="_blank">GitHub</a>
+                        <a href="https://github.com/PeiyaoTao/Calligraphy-Style-Recognition" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <h3>Discord Study Group Bot (Java)</h3>
-                    <p>Lead developer of team of four | Advisor: Prof. Alexander Lash, Professor of Software Engineering - 09/2024 ~ 12/2024</p>
+                    <h3 data-translate-key="project3Title">Discord Study Group Bot (Java)</h3>
+                    <p data-translate-key="project3Desc">Lead developer of team of four | Advisor: Prof. Alexander Lash, Professor of Software Engineering - 09/2024 ~ 12/2024</p>
                     <ul>
-                        <li>Led the design process of a discord bot from scratch to make it easier for students to organize study groups.</li>
-                        <li>Used MongoDB to store user data and study group information.</li>
-                        <li>Developed the feature that sends reminder notifications through discord direct messages to users before scheduled meeting times and allow users to customize their own reminder lead time.</li>
+                        <li data-translate-key="project3Feat1">Led the design process of a discord bot from scratch to make it easier for students to organize study groups.</li>
+                        <li data-translate-key="project3Feat2">Used MongoDB to store user data and study group information.</li>
+                        <li data-translate-key="project3Feat3">Developed the feature that sends reminder notifications through discord direct messages to users before scheduled meeting times and allow users to customize their own reminder lead time.</li>
                     </ul>
                     <div class="project-links">
                     </div>
                 </div>
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <h3>Augmented Reality Chessboard (C++)</h3>
-                    <p>Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
+                    <h3 data-translate-key="project4Title">Augmented Reality Chessboard (C++)</h3>
+                    <p data-translate-key="project4Desc">Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
                     <ul>
-                        <li>Developed an augmented reality chessboard application using OpenCV and OpenGL, displaying virtual chess pieces on a physical board.</li>
-                        <li>Implemented real-time piece recognition and tracking using computer vision techniques, achieving 85% accuracy in piece projection.</li>
+                        <li data-translate-key="project4Feat1">Developed an augmented reality chessboard application using OpenCV and OpenGL, displaying virtual chess pieces on a physical board.</li>
+                        <li data-translate-key="project4Feat2">Implemented real-time piece recognition and tracking using computer vision techniques, achieving 85% accuracy in piece projection.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://youtu.be/81PIRYOtdOY" target="_blank">Live Demo</a>
-                        <a href="https://github.com/PeiyaoTao/AR-Chessboard" target="_blank">GitHub</a>
+                        <a href="https://youtu.be/81PIRYOtdOY" target="_blank" data-translate-key="projectButtonLiveDemo">Live Demo</a>
+                        <a href="https://github.com/PeiyaoTao/AR-Chessboard" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
                 <!-- Project 5 -->
                 <div class="project-card">
-                    <h3>Chatroom Application (Java)</h3>
-                    <p>Main developer | Advisor: Dr. Brian Cross, Professor of Programming Design Paradigm - 09/2023 ~ 12/2023</p>
+                    <h3 data-translate-key="project5Title">Chatroom Application (Java)</h3>
+                    <p data-translate-key="project5Desc">Main developer | Advisor: Dr. Brian Cross, Professor of Programming Design Paradigm - 09/2023 ~ 12/2023</p>
                     <ul>
-                        <li>Designed a chatroom application using Java and WebSocket for real-time communication.</li>
-                        <li>Used threadpool for handling up to 10 clients at a time.</li>
-                        <li>Implemented a simple random compliment grammar generator for clients to greet others.</li>
+                        <li data-translate-key="project5Feat1">Designed a chatroom application using Java and WebSocket for real-time communication.</li>
+                        <li data-translate-key="project5Feat2">Used threadpool for handling up to 10 clients at a time.</li>
+                        <li data-translate-key="project5Feat3">Implemented a simple random compliment grammar generator for clients to greet others.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://github.com/PeiyaoTao/Chatroom-Server-and-Client-Application" target="_blank">GitHub</a>
+                        <a href="https://github.com/PeiyaoTao/Chatroom-Server-and-Client-Application" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
                 <!-- Project 6 -->
                 <div class="project-card">
-                    <h3>Fitex Farmers Market (C#)</h3>
-                    <p>Developed with a team of four | Advisor: Dr. Donald Scott McCrickard, Professor of Human-Computer Interaction Capstone - 02/2023 ~ 05/2023</p>
-                    
+                    <h3 data-translate-key="project6Title">Fitex Farmers Market (C#)</h3>
+                    <p data-translate-key="project6Desc">Developed with a team of four | Advisor: Dr. Donald Scott McCrickard, Professor of Human-Computer Interaction Capstone - 02/2023 ~ 05/2023</p>
+
                     <div class="image-container">
                         <img src="images/fitex-farmers-market-main-screen.jpg" alt="Fitex Farmers Market Main Screen" class="zoomable-image">
                         <img src="images/fitex-farmers-market-quest-screen.jpg" alt="Fitex Farmers Market Quest Screen" class="zoomable-image">
                     </div>
 
                     <ul>
-                        <li>Designed a game using Unity that collects player's daily step and uses step counts data to grow virtual crops on their farm.</li>
-                        <li>Implemented a quest and group challenge generator, which generates daily and weekly challenges for users with adaptive difficulty based on player level and unlocked crop types.</li>
+                        <li data-translate-key="project6Feat1">Designed a game using Unity that collects player's daily step and uses step counts data to grow virtual crops on their farm.</li>
+                        <li data-translate-key="project6Feat2">Implemented a quest and group challenge generator, which generates daily and weekly challenges for users with adaptive difficulty based on player level and unlocked crop types.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://github.com/PeiyaoTao/fitex-farmers-market" target="_blank">GitHub</a>
+                        <a href="https://github.com/PeiyaoTao/fitex-farmers-market" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
                 <!-- Project 7 -->
                 <div class="project-card">
-                    <h3>Bullet Hell Game (C#)</h3>
-                    <p>Main developer - 02/2022 ~ 05/2022</p>
+                    <h3 data-translate-key="project7Title">Bullet Hell Game (C#)</h3>
+                    <p data-translate-key="project7Desc">Main developer - 02/2022 ~ 05/2022</p>
                     <img src="images/bullet-hell-game-screenshot.png" alt="Bullet Hell Game Screenshot" class="zoomable-image">
                     <ul>
-                        <li>Developed a bullet hell game using Unity where players control a spaceship and must dodge incoming bullets.</li>
-                        <li>Implemented a power-up system that allows players to enhance their abilities by collecting power-ups and wing ships to protect themselves from enemies.</li>
+                        <li data-translate-key="project7Feat1">Developed a bullet hell game using Unity where players control a spaceship and must dodge incoming bullets.</li>
+                        <li data-translate-key="project7Feat2">Implemented a power-up system that allows players to enhance their abilities by collecting power-ups and wing ships to protect themselves from enemies.</li>
                     </ul>
                     <div class="project-links">
-                        <a href="https://youtu.be/JpekZRapZFw" target="_blank">Live Demo</a>
-                        <a href="https://github.com/PeiyaoTao/Bullet-Hell-Game" target="_blank">GitHub</a>
+                        <a href="https://youtu.be/JpekZRapZFw" target="_blank" data-translate-key="projectButtonLiveDemo">Live Demo</a>
+                        <a href="https://github.com/PeiyaoTao/Bullet-Hell-Game" target="_blank" data-translate-key="projectButtonGitHub">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -181,25 +205,26 @@
 
         <section id="contact" data-bg="images/contact-bg.jpg">
             <div class="content-card">
-                <h2>Get In Touch</h2>
-                <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <a href="mailto:taopeiyao@outlook.com" class="cta-button">Send me an email</a>
+                <h2 data-translate-key="contactTitle">Get In Touch</h2>
+                <p data-translate-key="contactParagraph">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <a href="mailto:taopeiyao@outlook.com" class="cta-button" data-translate-key="contactButton">Send me an email</a>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/peiyao-tao-06381a24a" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/PeiyaoTao" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/peiyao-tao-06381a24a" target="_blank" data-translate-key="contactLinkedIn">LinkedIn</a>
+                    <a href="https://github.com/PeiyaoTao" target="_blank" data-translate-key="contactGitHub">GitHub</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Peiyao Tao. All rights reserved.</p>
+        <p data-translate-key="footerCopyright">&copy; 2025 Peiyao Tao. All rights reserved.</p>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
-        <div id="image-modal-backdrop">
-            <span class="close-button">&times;</span>
-            <img id="modal-image-content">
-        </div>
+    <div id="image-modal-backdrop">
+        <span class="close-button">&times;</span>
+        <img id="modal-image-content">
+    </div>
 </body>
 </html>
