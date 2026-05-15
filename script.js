@@ -9,62 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTransitioning = false;
     let pendingBgUrl = null;
 
-    // --- 1. Core Logic: A Proactive "Game Loop" ---
-
-    // This function handles the entire background change animation.
-    function updateBackground(newBgUrl) {
-        if (!newBgUrl || newBgUrl === currentBg) return;
-
-        if (isTransitioning) {
-            // If an animation is playing, just remember the latest request.
-            pendingBgUrl = newBgUrl;
-            return;
-        }
-        isTransitioning = true;
-        
-        const img = new Image();
-        img.src = newBgUrl;
-        img.onload = () => {
-            backgroundDiv.style.opacity = '0';
-            setTimeout(() => {
-                backgroundDiv.style.backgroundImage = `url(${newBgUrl})`;
-                backgroundDiv.style.opacity = '1';
-                currentBg = newBgUrl;
-                isTransitioning = false;
-
-                // After finishing, immediately check if there's a pending change and run it.
-                if (pendingBgUrl) {
-                    const nextBg = pendingBgUrl;
-                    pendingBgUrl = null;
-                    updateBackground(nextBg);
-                }
-            }, 400);
-        };
-        img.onerror = () => { isTransitioning = false; };
-    }
-
-    // This is our main "decider" loop. It runs on a fixed timer.
-    function masterControlLoop() {
-        let mostVisibleSectionId = null;
-        let maxVisibility = 0;
-
-        // Find which section is currently most visible based on the latest data.
-        for (const sectionId in sectionStates) {
-            if (sectionStates[sectionId] > maxVisibility) {
-                maxVisibility = sectionStates[sectionId];
-                mostVisibleSectionId = sectionId;
-            }
-        }
-        
-        if (mostVisibleSectionId) {
-            const section = document.getElementById(mostVisibleSectionId);
-            if (section && section.hasAttribute('data-bg')) {
-                const newBgUrl = section.getAttribute('data-bg');
-                // Request a background update. The function will handle the logic.
-                updateBackground(newBgUrl);
-            }
-        }
-    }
+    // --- 1. Animation & Interaction Logic ---
 
     // --- 2. Observer and Loop Initialization ---
     
@@ -84,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(section);
         }
     });
-    
-    // Start the master control loop, running every 100ms.
-    setInterval(masterControlLoop, 100);
+
 
     // --- Other page logic (modals, menus, etc.) can go here ---
     // NOTE: The skills bar animation needs to be moved out of the observer
@@ -107,6 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const skillsSection = document.getElementById('skills');
         if (skillsSection) skillObserver.observe(skillsSection);
     }
+
+    // --- Project Filtering Logic ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || filterValue === category) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
 
     // --- Image Modal, Dropdown Menu, etc. (Unchanged) ---
     // (The rest of your code for modals and menus goes here)

@@ -6,6 +6,9 @@ const translations = {
         navExperience: "Work Experience",
         navProjects: "Projects",
         navContact: "Contact",
+        navResume: "Resume",
+        navSkills: "Skills",
+        navEducation: "Education",
 
         // Hero Section
         heroGreeting: "Hi, I'm Peiyao Tao.",
@@ -16,7 +19,7 @@ const translations = {
 
         // About Me Section
         aboutTitle: "About Me",
-        aboutParagraph1: "I am a second-year MSCS student at Northeastern University with a strong foundation in ",
+        aboutParagraph1: "I am an MSCS graduate from Northeastern University with a strong foundation in ",
         aboutKeywordDS: "Data Structures",
         aboutParagraph2: ", ",
         aboutKeywordAlgorithms: "Algorithms",
@@ -38,7 +41,26 @@ const translations = {
         aboutKeywordCV: "Computer Vision",
         aboutParagraph11: ", and ",
         aboutKeywordGameDev: "Game Development",
-        aboutParagraph12: ".",
+        aboutParagraph12: ". I am currently working as a Full Stack Developer but remain open to new work opportunities.",
+
+        // Skills Section
+        skillsTitle: "My Skills",
+        skillsLang: "Languages",
+        skillsAI: "AI / Computer Vision",
+        skillsCloud: "Cloud & Infrastructure",
+
+        // Education Section
+        educationTitle: "Education",
+        edu1Degree: "M.S. in Computer Science",
+        edu1School: "Northeastern University",
+        edu1Date: "09/2023 - 12/2025",
+        edu1CoursesLabel: "Key Courses:",
+        edu1Courses: "Computer Vision, Advanced Perception, Machine Learning, Natural Language Processing, Advanced Algorithms & Data Structures, Database, Computer Networking",
+        edu2Degree: "B.S. in Computer Science (Minors: Math, HCI)",
+        edu2School: "Virginia Tech",
+        edu2Date: "09/2018 - 05/2023",
+        edu2CoursesLabel: "Key Courses:",
+        edu2Courses: "Artificial Intelligence, Computer Systems, Numerical Analysis, Linear Algebra, Differential Equations, Multivariable Calculus, Applied Combinatorics, Human-Computer Interaction, GUI programming and Graphics",
 
         // Work Experience Section
         experienceTitle: "My Work Experience",
@@ -59,6 +81,10 @@ const translations = {
 
         // Projects Section
         projectsTitle: "My Projects",
+        filterAll: "All",
+        filterAI: "AI & Vision",
+        filterWeb: "Software & Web",
+        filterGame: "Game Dev",
         projectVlaTitle: "Vision-Language-Action (VLA) Agent for MiniGrid (Python)",
         projectVlaDesc: "Main developer",
         projectVlaFeat1: "Developed a neuro-symbolic VLA agent that solved sparse-reward navigation tasks with a ~90% success rate, utilizing a custom Spatial Softmax perception module and CLIP embeddings to overcome 'physics blindness'.",
@@ -127,6 +153,9 @@ const translations = {
         navExperience: "工作经历",
         navProjects: "项目",
         navContact: "联系我",
+        navResume: "简历",
+        navSkills: "技能",
+        navEducation: "教育经历",
 
         // Hero Section
         heroGreeting: "你好，我是陶沛尧。",
@@ -137,7 +166,7 @@ const translations = {
 
         // About Me Section
         aboutTitle: "个人简介",
-        aboutParagraph1: "我是一名就读于美国东北大学计算机科学硕士二年级学生，在",
+        aboutParagraph1: "我毕业于美国东北大学计算机科学硕士专业，在",
         aboutKeywordDS: "数据结构",
         aboutParagraph2: "、",
         aboutKeywordAlgorithms: "算法",
@@ -159,7 +188,26 @@ const translations = {
         aboutKeywordCV: "计算机视觉",
         aboutParagraph11: "和",
         aboutKeywordGameDev: "游戏开发",
-        aboutParagraph12: "。",
+        aboutParagraph12: "。我目前担任全栈开发工程师，但也始终对新的工作机会持开放态度。",
+
+        // Skills Section
+        skillsTitle: "我的技能",
+        skillsLang: "编程语言",
+        skillsAI: "人工智能与视觉",
+        skillsCloud: "云计算与基础设施",
+
+        // Education Section
+        educationTitle: "教育经历",
+        edu1Degree: "计算机科学硕士",
+        edu1School: "美国东北大学",
+        edu1Date: "2023年9月 - 2025年12月",
+        edu1CoursesLabel: "核心课程：",
+        edu1Courses: "计算机视觉、高级感知、机器学习、自然语言处理、高级算法与数据结构、数据库、计算机网络",
+        edu2Degree: "计算机科学学士 (辅修：数学，人机交互)",
+        edu2School: "弗吉尼亚理工大学",
+        edu2Date: "2018年9月 - 2023年5月",
+        edu2CoursesLabel: "核心课程：",
+        edu2Courses: "人工智能、计算机系统、数值分析、线性代数、微分方程、多元微积分、应用组合数学、人机交互、GUI编程与图形学",
 
         // Work Experience Section
         experienceTitle: "工作经历",
@@ -180,6 +228,10 @@ const translations = {
 
         // Projects Section
         projectsTitle: "我的项目",
+        filterAll: "全部",
+        filterAI: "人工智能与视觉",
+        filterWeb: "软件与Web开发",
+        filterGame: "游戏开发",
         projectVlaTitle: "MiniGrid 视觉-语言-动作 (VLA) 智能体 (Python)",
         projectVlaDesc: "主要开发者",
         projectVlaFeat1: "开发了一个神经符号VLA智能体，利用自定义空间Softmax感知模块和CLIP嵌入解决“物理盲点”问题，以约90%的成功率完成稀疏奖励导航任务。",
