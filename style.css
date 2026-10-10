@@ -72,6 +72,7 @@ a:hover {
 
 /* --- Layout & Sections --- */
 section {
+    scroll-margin-top: 3rem;
     /* Make section at least the height of the viewport */
     min-height: 100vh;
     
@@ -215,6 +216,25 @@ nav ul {
     justify-content: center;
     gap: 2rem;
     text-align: left;
+}
+
+.about-image {
+    flex-shrink: 0;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-text p {
+    text-align: left;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 .about-image img {
@@ -690,10 +710,12 @@ nav ul li a:hover::after {
 .language-switcher {
     display: flex;
     gap: 0.5rem;
+    flex-shrink: 0;
     margin-left: 1.5rem; /* Adds space between nav links and switcher */
 }
 
 .lang-btn {
+    white-space: nowrap;
     background-color: transparent;
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
@@ -718,6 +740,40 @@ nav ul li a:hover::after {
 }
 
 /* --- Responsive Styles for Mobile Devices --- */
+/* Chinese text uses local fonts and more space between lines. */
+:lang(zh) body {
+    font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+}
+
+:lang(zh) h1,
+:lang(zh) h2,
+:lang(zh) h3,
+:lang(zh) nav a,
+:lang(zh) button,
+:lang(zh) .cta-button {
+    font-family: 'Outfit', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+    letter-spacing: 0;
+}
+
+:lang(zh) p,
+:lang(zh) .project-card li,
+:lang(zh) .experience-card li {
+    line-height: 1.85;
+    font-weight: 400;
+    line-break: strict;
+    overflow-wrap: break-word;
+}
+
+:lang(zh) h1 {
+    font-size: clamp(2rem, 5.5vw, 4rem);
+    line-height: 1.35;
+}
+
+:lang(zh) h2,
+:lang(zh) h3 {
+    line-height: 1.45;
+}
+
 @media (max-width: 768px) {
 
     /* --- Responsive Typography --- */

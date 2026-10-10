@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peiyao's personal website</title>
+    <title data-translate-key="siteTitle">Peiyao Tao | Full Stack Developer</title>
+    <meta name="description" content="Full stack developer building web applications, computer vision systems, AI tools, and games. Explore Peiyao Tao's projects and experience." data-translate-attr="content:siteDescription">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261010-skills">
+    <link rel="stylesheet" href="style.css?v=20261010-copy">
 </head>
 <body>
     <div id="dynamic-background"></div>
@@ -16,7 +17,7 @@
             <a href="#" class="logo" id="logo-button">PT</a>
 
             <ul>
-                <li><a href="#hero " data-translate-key="navHome">Home</a></li>
+                <li><a href="#hero" data-translate-key="navHome">Home</a></li>
                 <li><a href="#about" data-translate-key="navAbout">About</a></li>
                 <li><a href="#skills" data-translate-key="navSkills">Skills</a></li>
                 <li><a href="#education" data-translate-key="navEducation">Education</a></li>
@@ -27,8 +28,8 @@
             </ul>
 
             <div class="language-switcher">
-                <button data-lang="en" class="lang-btn active">EN</button>
-                <button data-lang="zh" class="lang-btn">ZH</button>
+                <button type="button" data-lang="en" class="lang-btn active" aria-label="English" aria-pressed="true">EN</button>
+                <button type="button" data-lang="zh" class="lang-btn" aria-label="中文" aria-pressed="false">中文</button>
             </div>
         </nav>
     </header>
@@ -38,7 +39,7 @@
             <div class="content-card">
                 <h1 data-translate-key="heroGreeting">Hi, I'm <span class="highlight">Peiyao Tao</span>.</h1>
                 <p class="hero-tagline" data-translate-key="heroTagline">
-                    I build systems that leverage computer vision and machine learning to solve real-world problems.
+                    I build practical web applications, computer vision systems, AI tools, and games.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="cta-button" data-translate-key="heroButtonWork">View My Work</a>
@@ -52,34 +53,12 @@
                 <h2 data-translate-key="aboutTitle">About Me</h2>
                 <div class="about-container">
                     <div class="about-image">
-                        <img src="images/selfie.jpg" alt="Peiyao Tao Selfie">
+                        <img src="images/selfie.jpg" alt="Peiyao Tao" data-translate-attr="alt:aboutPortraitAlt">
                     </div>
                     <div class="about-text">
-                        <p>
-                            <span data-translate-key="aboutParagraph1">I am a second-year MSCS student at Northeastern University with a strong foundation in </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordDS">Data Structures</span><span 
-                            data-translate-key="aboutParagraph2">, </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordAlgorithms">Algorithms</span><span 
-                            data-translate-key="aboutParagraph3">, and </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordSWDev">Software Development</span><span 
-                            data-translate-key="aboutParagraph4">. I have hands-on experience in </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordPython">Python</span><span 
-                            data-translate-key="aboutParagraph5">, </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordCPP">C++</span><span 
-                            data-translate-key="aboutParagraph6">, and </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordJava">Java</span><span 
-                            data-translate-key="aboutParagraph7">, and I am proficient in using libraries such as </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordOpenCV">OpenCV</span><span 
-                            data-translate-key="aboutParagraph8"> and </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordTensorFlow">TensorFlow</span><span 
-                            data-translate-key="aboutParagraph9">. I enjoy solving complex problems and learning new technologies. My interests lie in </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordML">Machine Learning</span><span 
-                            data-translate-key="aboutParagraph10">, </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordCV">Computer Vision</span><span 
-                            data-translate-key="aboutParagraph11">, and </span><span 
-                            class="highlight-text" data-translate-key="aboutKeywordGameDev">Game Development</span><span 
-                            data-translate-key="aboutParagraph12">.</span>
-                        </p>
+                        <p data-translate-key="aboutParagraph1">I'm Peiyao Tao, a full stack developer with an M.S. in Computer Science from Northeastern University and a B.S. from Virginia Tech. I build software around practical needs, pairing reliable engineering with clear, usable interfaces.</p>
+                        <p data-translate-key="aboutParagraph2">My work spans restaurant operations systems, a cloud-synced cat health tracker, computer vision models, AI code review tools, and games. I enjoy connecting the pieces of a product: designing data models, implementing core logic, and refining the interactions people use every day.</p>
+                        <p data-translate-key="aboutParagraph3">I'm open to engineering roles and collaborations where I can help turn real problems into useful software, learn from teammates, and take a product from an early idea to a working release.</p>
                     </div>
                 </div>
             </div>
@@ -103,7 +82,7 @@
                 <div class="skill-category">
                     <h3 data-translate-key="skillsAI">AI / Computer Vision</h3>
                     <div class="skill-tags">
-                        <span>OpenCV</span><span>YOLO</span><span>MATLAB</span><span>Transformers</span><span>CNN</span><span>Object Detection</span><span>Reflection Removal</span><span>VLA</span><span>VLM</span><span>HuggingFace</span><span>Scikit-learn</span><span>ONNX</span><span>LangChain</span><span>PyTorch</span><span>TensorFlow</span><span>MCP</span><span>Data Engineering</span>
+                        <span>OpenCV</span><span>YOLO</span><span>MATLAB</span><span>Transformers</span><span>CNN</span><span data-translate-key="skillObjectDetection">Object Detection</span><span data-translate-key="skillReflectionRemoval">Reflection Removal</span><span>VLA</span><span>VLM</span><span>HuggingFace</span><span>Scikit-learn</span><span>ONNX</span><span>LangChain</span><span>PyTorch</span><span>TensorFlow</span><span>MCP</span><span data-translate-key="skillDataEngineering">Data Engineering</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -192,7 +171,7 @@
             <div class="project-grid">
                 <!-- Latest game: Otter Juice Shop -->
                 <div class="project-card project-card-featured" data-category="game-dev">
-                    <h3 data-translate-key="projectOtterTitle">Otter Juice Shop (水獭果汁坊)</h3>
+                    <h3 data-translate-key="projectOtterTitle">Otter Juice Shop</h3>
                     <p data-translate-key="projectOtterDesc">Latest game · Playable browser prototype | Cocos Creator 3.8.8 · TypeScript</p>
                     <div class="game-showcase">
                         <div class="game-gallery">
@@ -209,7 +188,7 @@
                             <ul>
                                 <li data-translate-key="projectOtterFeat1">Built a pixel-art seaside shop game that connects merge-two supply preparation, an 8×10 fruit match-three board, optional water-sort refinement, and customer order fulfillment into a continuous business-day loop.</li>
                                 <li data-translate-key="projectOtterFeat2">Implemented four shop levels, otter outfits, customizable decorations, a collection room, and a business ledger tracking revenue, tips, waste, and profit.</li>
-                                <li data-translate-key="projectOtterFeat3">Separated game rules from the Cocos interface and platform storage, with local save recovery, pause/resume behavior, responsive layouts, and 321 regression tests.</li>
+                                <li data-translate-key="projectOtterFeat3">Separated game rules from the Cocos interface and platform storage, with local save recovery, pause/resume behavior, and responsive layouts.</li>
                             </ul>
                             <div class="project-links">
                                 <a href="videos/otter-juice-shop-gameplay.webm" target="_blank" rel="noopener noreferrer" data-translate-key="projectButtonGameplay">Gameplay Video</a>
@@ -285,7 +264,7 @@
                 <div class="project-card" data-category="ai-vision">
                     <h3 data-translate-key="project1Title">Comparative Analysis of Deblurring Models (Python) </h3>
                     <p data-translate-key="project1Desc">Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2025 ~ 09/2025</p>
-                    <img src="images/image-deblurring.png" alt="Comparative Analysis of Deblurring Models" class="zoomable-image">
+                    <img src="images/image-deblurring.png" alt="Comparative Analysis of Deblurring Models" data-translate-attr="alt:projectDeblurringAlt" class="zoomable-image">
                     <ul>
                         <li data-translate-key="project1Feat1">Developed and compared a CNN-based U-Net against a Transformer-based Swin-Unet for high-fidelity image deblurring.</li>
                         <li data-translate-key="project1Feat2">Engineered a hybrid Swin-Unet with multi-scale skip connections and enhanced the U-Net decoder with Efficient Channel Attention (ECA) principles to achieving state-of-the-art, artifact-free results.</li>
@@ -299,7 +278,7 @@
                 <div class="project-card" data-category="ai-vision">
                     <h3 data-translate-key="project2Title">Calligraphy Style Recognition (Python)</h3>
                     <p data-translate-key="project2Desc">Main developer | Advisor: Dr. Bruce Maxwell, Professor of Computer Vision - 09/2024 ~ 12/2024</p>
-                    <img src="images/calligraphy_project_poster.png" alt="Calligraphy Style Recognition Project Poster" class="zoomable-image">
+                    <img src="images/calligraphy_project_poster.png" alt="Calligraphy Style Recognition Project Poster" data-translate-attr="alt:projectCalligraphyAlt" class="zoomable-image">
                     <ul>
                         <li data-translate-key="project2Feat1">Developed a machine learning model based on EfficientNet50 for classifying Chinese calligraphy styles.</li>
                         <li data-translate-key="project2Feat2">Applied stratified sampling techniques and attention mechanisms to improve model performance and reduce overfitting.</li>
@@ -353,8 +332,8 @@
                     <p data-translate-key="project6Desc">Developed with a team of four | Advisor: Dr. Donald Scott McCrickard, Professor of Human-Computer Interaction Capstone - 02/2023 ~ 05/2023</p>
 
                     <div class="image-container">
-                        <img src="images/fitex-farmers-market-main-screen.jpg" alt="Fitex Farmers Market Main Screen" class="zoomable-image">
-                        <img src="images/fitex-farmers-market-quest-screen.jpg" alt="Fitex Farmers Market Quest Screen" class="zoomable-image">
+                        <img src="images/fitex-farmers-market-main-screen.jpg" alt="Fitex Farmers Market Main Screen" data-translate-attr="alt:projectFitexMainAlt" class="zoomable-image">
+                        <img src="images/fitex-farmers-market-quest-screen.jpg" alt="Fitex Farmers Market Quest Screen" data-translate-attr="alt:projectFitexQuestAlt" class="zoomable-image">
                     </div>
 
                     <ul>
@@ -369,7 +348,7 @@
                 <div class="project-card" data-category="game-dev">
                     <h3 data-translate-key="project7Title">Bullet Hell Game (C#)</h3>
                     <p data-translate-key="project7Desc">Main developer - 02/2022 ~ 05/2022</p>
-                    <img src="images/bullet-hell-game-screenshot.png" alt="Bullet Hell Game Screenshot" class="zoomable-image">
+                    <img src="images/bullet-hell-game-screenshot.png" alt="Bullet Hell Game Screenshot" data-translate-attr="alt:projectBulletHellAlt" class="zoomable-image">
                     <ul>
                         <li data-translate-key="project7Feat1">Developed a bullet hell game using Unity where players control a spaceship and must dodge incoming bullets.</li>
                         <li data-translate-key="project7Feat2">Implemented a power-up system that allows players to enhance their abilities by collecting power-ups and wing ships to protect themselves from enemies.</li>
@@ -396,11 +375,11 @@
     </main>
 
     <footer>
-        <p data-translate-key="footerCopyright">&copy; 2025 Peiyao Tao. All rights reserved.</p>
+        <p data-translate-key="footerCopyright">© 2026 Peiyao Tao. All rights reserved.</p>
     </footer>
 
-    <script src="translations.js?v=20261010-skills"></script>
-    <script src="script.js?v=20261010-skills"></script>
+    <script src="translations.js?v=20261010-copy"></script>
+    <script src="script.js?v=20261010-copy"></script>
     <div id="image-modal-backdrop">
         <span class="close-button">&times;</span>
         <img id="modal-image-content">

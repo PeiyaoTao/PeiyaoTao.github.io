@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // The function that performs the translation
     function switchLanguage(lang) {
-        document.documentElement.lang = lang;
+        if (!translations[lang]) return;
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
         // Handle text content changes
         document.querySelectorAll('[data-translate-key]').forEach(element => {
             const key = element.getAttribute('data-translate-key');
@@ -98,23 +99,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update the active button style
         langButtons.forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-lang') === lang) {
-                btn.classList.add('active');
-            }
+            const isActive = btn.getAttribute('data-lang') === lang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', String(isActive));
         });
+
+        try {
+            localStorage.setItem('portfolio-language', lang);
+        } catch {
+            // Language switching also works when browser storage is unavailable.
+        }
     }
 
     // Add click event listeners to the buttons
     langButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const selectedLang = event.target.getAttribute('data-lang');
+        button.addEventListener('click', () => {
+            const selectedLang = button.getAttribute('data-lang');
             switchLanguage(selectedLang);
         });
     });
 
-    // Set the default language on page load
+    // Restore the visitor's language choice, with English as the initial default.
     if (langButtons.length > 0) {
-        switchLanguage('en');
+        let initialLang = 'en';
+        try {
+            const savedLang = localStorage.getItem('portfolio-language');
+            if (savedLang === 'en' || savedLang === 'zh') initialLang = savedLang;
+        } catch {
+            // Use the default when browser storage is unavailable.
+        }
+        switchLanguage(initialLang);
     }
 });
