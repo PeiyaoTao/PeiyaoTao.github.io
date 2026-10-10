@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // The function that performs the translation
     function switchLanguage(lang) {
+        document.documentElement.lang = lang;
         // Handle text content changes
         document.querySelectorAll('[data-translate-key]').forEach(element => {
             const key = element.getAttribute('data-translate-key');
