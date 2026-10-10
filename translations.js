@@ -46,8 +46,15 @@ const translations = {
         // Skills Section
         skillsTitle: "My Skills",
         skillsLang: "Languages",
+        skillsWeb: "Web & Databases",
         skillsAI: "AI / Computer Vision",
-        skillsCloud: "Cloud & Infrastructure",
+        skillsGame: "Game Development",
+        skillsCloud: "Cloud & Tooling",
+        skillsEngineering: "Software Engineering",
+        skillWeChatCloud: "WeChat Cloud Development",
+        skillAutomatedTesting: "Automated Testing",
+        skillStaticAnalysis: "Static Code Analysis",
+        skillLLMReview: "LLM-assisted Code Review",
 
         // Education Section
         educationTitle: "Education",
@@ -218,8 +225,15 @@ const translations = {
         // Skills Section
         skillsTitle: "我的技能",
         skillsLang: "编程语言",
+        skillsWeb: "Web 开发与数据库",
         skillsAI: "人工智能与视觉",
-        skillsCloud: "云计算与基础设施",
+        skillsGame: "游戏开发",
+        skillsCloud: "云计算与工具",
+        skillsEngineering: "软件工程",
+        skillWeChatCloud: "微信云开发",
+        skillAutomatedTesting: "自动化测试",
+        skillStaticAnalysis: "静态代码分析",
+        skillLLMReview: "大模型辅助代码审查",
 
         // Education Section
         educationTitle: "教育经历",
